@@ -33,7 +33,7 @@ class JobController extends Controller
             'Salary' => request('Salary'),
             'employer_id' => 1
         ]);
-        return redirect('/jobs');
+        return redirect('/job');
     }
     public function edit(Job $job)
     {
@@ -58,6 +58,6 @@ class JobController extends Controller
     {
         //Authorize (on hold)
         $job->delete();
-        return redirect('/jobs');
+        return redirect('/job');
     }
 }
