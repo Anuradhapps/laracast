@@ -9,7 +9,7 @@ class JobController extends Controller
 {
     public function index()
     {
-        $jobs = Job::with('employer')->latest()->Paginate(3);
+        $jobs = Job::with('employer')->latest()->Paginate(5);
         return view('jobs.index', [
             "Jobs" => $jobs
         ]);
